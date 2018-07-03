@@ -1,0 +1,12 @@
+<%= form_tag "/", method: :get do %>
+  <%= text_field_tag(
+      :expression,
+      params[:expression],
+      placeholder: "Calculation Input",
+      class: "form-control"
+  ) %>
+
+  <%= submit_tag :submit %>
+
+  <%= "Result is: #{ calculate_result }" %>
+<% end %>
